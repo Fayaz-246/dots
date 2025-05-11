@@ -1,0 +1,23 @@
+#!/bin/sh
+
+dnd () {
+  LC_TIME="en_US.UTF-8" date '+%A/%d - %B/%Y'
+}
+
+bat () {
+  statusbat
+}
+
+wifi () {
+  statuswifi
+}
+
+tmd () {
+  date '+%I:%M:%S %p'
+}
+
+while :; do 
+    xsetroot -name "$(bat) | $(wifi) | $(tmd) || $(dnd)"
+    sleep 1
+done
+
