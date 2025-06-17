@@ -1,0 +1,35 @@
+# Reload SXHKD
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# Volume
+super + shift + d
+    volumeStatus
+
+# Emoji
+super + period
+    rofi -show emoji
+
+# Wifi Rofi
+super + w
+    wifiRofi
+
+# Waterfox
+super + shift + w
+    waterfox
+
+# Screenshot
+super + shift + s
+    screenshot
+
+# Clipboard
+super + v
+    clipmenu
+
+# Vesktop
+super + shift + v
+    vesktop
+
+# Battery Info
+super + b
+     batteryInfo
