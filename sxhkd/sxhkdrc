@@ -14,9 +14,9 @@ super + period
 super + w
     wifiRofi
 
-# Waterfox
+# Firefox
 super + shift + w
-    waterfox
+   openFirefox 
 
 # Screenshot
 super + shift + s
@@ -26,10 +26,11 @@ super + shift + s
 super + v
     clipmenu
 
-# Vesktop
-super + shift + v
-    vesktop
+# Discord
+super + shift + d
+    discord
 
 # Battery Info
 super + b
      batteryInfo
+
