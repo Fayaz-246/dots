@@ -3,7 +3,7 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
 vim.opt.termguicolors = true
-
+vim.opt.showtabline = 2
 -- Better netrw visuals
 vim.g.netrw_banner = 0       -- disable banner
 vim.g.netrw_liststyle = 3    -- tree-style view (like NERDTree)
@@ -15,11 +15,13 @@ vim.opt.scrolloff = 4        -- no extra lines below cursor
 vim.opt.virtualedit = "none" -- disallow cursor past end-of-line
 
 -- Enables smart and automatic indenting
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.cindent = false -- Optional, useful only for C-style
+-- vim.opt.autoindent = true
+-- vim.opt.smartindent = true
+-- vim.opt.cindent = false -- Optional, useful only for C-style
 
 -- Use spaces instead of tabs
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
+
+vim.opt.clipboard = "unnamedplus"

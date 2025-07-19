@@ -26,9 +26,8 @@ vim.keymap.set('v', '<leader>/', function()
 end, { desc = 'Toggle comment selection' })
 
 -- yank into clipboard even if on ssh
-vim.keymap.set('n', '<leader>y', '<Plug>OSCYankOperator')
-vim.keymap.set('v', '<leader>y', '<Plug>OSCYankVisual')
-
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
 -- copy the whole file into sys keyboard
 vim.keymap.set("n", "<leader>cc", function()
   local filepath = vim.fn.expand("%:p") -- absolute path to current file
@@ -69,3 +68,10 @@ end, { desc = "Format current file" })
 vim.keymap.set("n", "<leader>sr", [[:s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 -- Replace all instances of the word under cursor in the whole file
 vim.keymap.set("n", "<leader>Sr", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+
+-- Disabling Arrow Keys & Mouse <Just gud practise>
+local keys = { "<Up>", "<Down>", "<Right>", "<Left>" }
+for _, key in ipairs(keys) do
+  vim.keymap.set({ "n", "v" }, key, "<Nop>")
+end
+vim.opt.mouse = ""
